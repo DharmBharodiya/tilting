@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Tilt</title>
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
+
+        body{
+            background-color: #0f0f0f;
+            /* display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center; */
+        }
+
+        .main{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #contain{
+            width: 325px;
+            height: 500px;
+            background: rgba(255,255,255,0.3);
+            /* opacity: 0.3; */
+            border-left: 1px solid #fff;
+            border-top: 1px solid #fff;
+            border-radius: 25px;
+            align-self: center;
+            overflow: hidden;
+            margin: 50px;
+            position: relative;
+            text-align: center;
+        }
+
+        #contain h1{
+            color: #f0f0f0;
+            font-size: 200px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+            opacity: .5;
+            pointer-events: none;
+            position: absolute;
+            top: -147px;
+            right: 4px;
+        }
+
+        #contain p{
+            color: white;
+            font-size: 20px;
+            /* text-transform: uppercase; */
+            font-family: 'Montserrat', sans-serif;
+            position: absolute;
+            top: 200px;
+        }
+
+        #contain a{
+            color: white;
+            font-family: "Montserrat";
+            font-weight: bold;
+            text-decoration: none;
+            position: relative;
+            top: 430px;
+        }
+
+        ::selection{
+            color: white;
+            background-color: tomato;
+        }
+
+    
+    </style>
+</head>
+<body>
+<div class="main">
+    
+            <div id="contain">
+                <h1>01</h1>
+
+                <p>Hey this is Dharm and you are looking at an all new glass card made by me. PS hover over the card to see some MAGIC happening.</p>
+
+                <a href="#">Read More</a>
+            </div>
+    
+</div>
+
+<script type="text/javascript" src="vanilla-tilt.js"></script>
+
+<script>
+
+VanillaTilt.init(document.querySelector("#contain"), {
+		max: 25,
+		speed: 400,
+        glare: true,
+        "max-glare": 1,
+        easing:                 "cubic-bezier(.03,.98,.52,.99)"
+	});
+	
+
+</script>
+
+</body>
+</html>
